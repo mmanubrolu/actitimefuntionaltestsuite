@@ -25,4 +25,13 @@ public class Util extends TestBase{
 		return prop.getProperty("password");
 	}
 
+	
+	public  String getCustomerName() {
+		return "Mallikarjuna";
+	}
+	
+	public  String getCustomerDescription() {
+		return "Mallikarjuna as customer during creation";
+	}
+
 }
