@@ -8,10 +8,12 @@ import org.testng.annotations.Test;
 import com.krn.actitime.page.HomePage;
 import com.krn.actitime.page.LoginPage;
 import com.krn.actitime.testbase.TestBase;
+import com.krn.actitime.util.Util;
 
 public class LoginPageTest extends TestBase {
 	public LoginPage loginPage;
 	public HomePage homePage;
+	public Util util;
 	
 	LoginPageTest(){
 		super();
@@ -21,6 +23,7 @@ public class LoginPageTest extends TestBase {
 	public void setUp() {
 		initilization();
 		loginPage = new LoginPage();
+		util = new Util();
 	}
 	
 	@Test(priority=1)
@@ -43,7 +46,8 @@ public class LoginPageTest extends TestBase {
 	
 	@Test(priority=4)
 	public void loginTest() throws InterruptedException {
-		homePage= loginPage.clickOnLoginButton(prop.getProperty("userName"), prop.getProperty("password"));
+		
+		homePage= loginPage.clickOnLoginButton(util.getUserName(), util.getPassword());
 	}
 	@AfterMethod
 	public void tearDown() {

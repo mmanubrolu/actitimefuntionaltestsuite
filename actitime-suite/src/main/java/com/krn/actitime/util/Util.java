@@ -16,5 +16,13 @@ public class Util extends TestBase{
 		actions.moveToElement(element).build().perform();
 		element.click();
 	}
+	
+	public  String getUserName() {
+		return prop.getProperty("userName");
+	}
+	
+	public  String getPassword() {
+		return prop.getProperty("password");
+	}
 
 }

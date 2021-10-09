@@ -11,6 +11,7 @@ import com.krn.actitime.page.ReportPage;
 import com.krn.actitime.page.TaskPage;
 import com.krn.actitime.page.UserPage;
 import com.krn.actitime.testbase.TestBase;
+import com.krn.actitime.util.Util;
 
 public class HomePageTest extends TestBase {
 	public LoginPage loginPage;
@@ -18,6 +19,7 @@ public class HomePageTest extends TestBase {
 	public TaskPage taskPage;
 	public UserPage userPage;
 	public ReportPage reportPage;
+	public Util util;
 	
 	public HomePageTest(){
 		super();
@@ -27,8 +29,9 @@ public class HomePageTest extends TestBase {
 	public void setUp() {
 		initilization();
 		loginPage = new LoginPage();
+		util = new Util();
 		try {
-			homePage = loginPage.clickOnLoginButton(prop.getProperty("userName"), prop.getProperty("password"));
+			homePage = loginPage.clickOnLoginButton(util.getUserName(), util.getPassword());
 		} catch (InterruptedException e) {
 			
 			e.printStackTrace();
