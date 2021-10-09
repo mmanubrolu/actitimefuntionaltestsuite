@@ -27,25 +27,25 @@ public class LoginPageTest extends TestBase {
 	}
 	
 	@Test(priority=1)
-	public void titleValidateTest(){
+	public void validateTitleTest(){
 		String title = loginPage.getTitle();
 		Assert.assertEquals(title, "actiTIME - Login", "Title was not matched in login page");
 		
 	}
 	@Test(priority=2)
-	public void logoDisplayTest() throws InterruptedException {
+	public void validateLogoDisplayTest() throws InterruptedException {
 		boolean logoDisplayed = loginPage.isLogoDisplayed();
 		Assert.assertTrue(logoDisplayed, "Logo was not displayed");
 	}
 	
 	@Test(priority=3) 
-	public void urlValidateTest() {
+	public void validateURLTest() {
 		String url =loginPage.getUrl();
 		Assert.assertEquals(url, "https://demo.actitime.com/login.do", "url was not matched in login page");
 	}
 	
 	@Test(priority=4)
-	public void loginTest() throws InterruptedException {
+	public void validateLoginTest() throws InterruptedException {
 		
 		homePage= loginPage.clickOnLoginButton(util.getUserName(), util.getPassword());
 	}
