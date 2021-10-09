@@ -1,10 +1,12 @@
 package com.krn.actitime.page;
 
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.krn.actitime.testbase.TestBase;
+import com.krn.actitime.util.Util;
 
 public class HomePage extends TestBase{
 	
@@ -55,24 +57,35 @@ public class HomePage extends TestBase{
 	}
 	
 	public TaskPage clickOnTasksLink() throws InterruptedException {
-		tasksLink.click();
-		Thread.sleep(10000);
 		
+		Thread.sleep(6000);
+		Util.moveToElement(driver, tasksLink);
+		Thread.sleep(6000);
+
 		return new TaskPage();
 	}
 	
 	
 	public ReportPage clickOnReportsLink() throws InterruptedException {
-		reportsLink.click();
-		Thread.sleep(10000);
+		Thread.sleep(6000);
+		Util.moveToElement(driver, reportsLink);
+		Thread.sleep(6000);
 		
 		return new ReportPage();
 	}
 	
 	public UserPage clickOnUserLink() throws InterruptedException {
-		usersLink.click();
-		Thread.sleep(10000);
+		Thread.sleep(6000);
+		Util.moveToElement(driver, usersLink);
+		Thread.sleep(6000);
 		
 		return new UserPage();
 	}
+	
+	public void clickOnLogoutLink() throws InterruptedException {
+		Thread.sleep(6000);
+		Util.moveToElement(driver, logOut);
+		Thread.sleep(6000);
+	}
+	
 }
