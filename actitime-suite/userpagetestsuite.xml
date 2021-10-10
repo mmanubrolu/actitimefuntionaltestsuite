@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Default suite">
-  <test verbose="2" name="Default test">
+<suite name="User Page Test Suite">
+  <test verbose="2" name="User Page test">
     <classes>
-      <class name="com.krn.actitime.test.LoginPageTest"/>
-      <class name="com.krn.actitime.test.HomePageTest"/>
-      <class name="com.krn.actitime.test.TaskPageTest"/>
       <class name="com.krn.actitime.test.UserPageTest"/>
     </classes>
   </test> <!-- Default test -->

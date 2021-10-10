@@ -33,5 +33,21 @@ public class Util extends TestBase{
 	public  String getCustomerDescription() {
 		return "Mallikarjuna as customer during creation";
 	}
+	
+	
+	public String getUserFirstName() {
+		return "Mallikarjuna";
+	}
 
+	public String getUserMiddleName() {
+		return "Rao";
+	}
+	
+	public String getUserLastName() {
+		return "Manubrolu";
+	}
+	
+	public String getUserEmail() {
+		return "mmanubrolu@gmail.com";
+	}
 }
